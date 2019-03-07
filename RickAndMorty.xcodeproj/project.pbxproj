@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		A243BE792231803F0040E930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243BE782231803F0040E930 /* AppDelegate.swift */; };
-		A243BE7B2231803F0040E930 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243BE7A2231803F0040E930 /* ViewController.swift */; };
+		A243BE7B2231803F0040E930 /* CharactersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243BE7A2231803F0040E930 /* CharactersController.swift */; };
 		A243BE7E2231803F0040E930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A243BE7C2231803F0040E930 /* Main.storyboard */; };
 		A243BE80223180400040E930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A243BE7F223180400040E930 /* Assets.xcassets */; };
 		A243BE83223180400040E930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A243BE81223180400040E930 /* LaunchScreen.storyboard */; };
+		A243BE8C223182930040E930 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243BE8B223182930040E930 /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A243BE752231803F0040E930 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A243BE782231803F0040E930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A243BE7A2231803F0040E930 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A243BE7A2231803F0040E930 /* CharactersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersController.swift; sourceTree = "<group>"; };
 		A243BE7D2231803F0040E930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A243BE7F223180400040E930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A243BE82223180400040E930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A243BE84223180400040E930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A243BE8B223182930040E930 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		A243BE772231803F0040E930 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				A243BE8A223181FD0040E930 /* controllers */,
 				A243BE782231803F0040E930 /* AppDelegate.swift */,
-				A243BE7A2231803F0040E930 /* ViewController.swift */,
 				A243BE7C2231803F0040E930 /* Main.storyboard */,
 				A243BE7F223180400040E930 /* Assets.xcassets */,
 				A243BE81223180400040E930 /* LaunchScreen.storyboard */,
 				A243BE84223180400040E930 /* Info.plist */,
 			);
 			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		A243BE8A223181FD0040E930 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A243BE7A2231803F0040E930 /* CharactersController.swift */,
+				A243BE8B223182930040E930 /* CustomNavigationController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A243BE7B2231803F0040E930 /* ViewController.swift in Sources */,
+				A243BE8C223182930040E930 /* CustomNavigationController.swift in Sources */,
+				A243BE7B2231803F0040E930 /* CharactersController.swift in Sources */,
 				A243BE792231803F0040E930 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
