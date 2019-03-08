@@ -16,6 +16,16 @@ class APIHelper {
         return _baseUrl + "character/"
     }
     
+    func urlWithParam() -> String {
+        var base = urlCharacter + "?"
+        if UserDefaultsHelper().getName() != "" {
+            base += "name=\(UserDefaultsHelper().getName())&"
+        }
+        let status = UserDefaultsHelper().getStatus() ? "alive" : "dead"
+        base += "status=\(status)"
+        return base
+    }
+    
     func getCharacter(_ string: String, completion: ApiCompletion?) {
         if let url = URL(string: string) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in

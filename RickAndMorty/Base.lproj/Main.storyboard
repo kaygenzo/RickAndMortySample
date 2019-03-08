@@ -18,12 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8u5-9s-35L">
+                                <rect key="frame" x="20" y="69" width="335" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="sHE-DM-wbG"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Query"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vNc-gc-KgK"/>
+                                </connections>
+                            </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oT-4o-JRL" customClass="DetailView" customModule="RickAndMorty" customModuleProvider="target">
                                 <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zx6-tl-Y6y">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="101" width="375" height="566"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P29-YO-n4S">
                                     <size key="itemSize" width="180" height="174"/>
@@ -85,13 +99,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="8u5-9s-35L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="7gP-Up-BOt"/>
                             <constraint firstItem="Zx6-tl-Y6y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9yR-I7-PFV"/>
+                            <constraint firstItem="Zx6-tl-Y6y" firstAttribute="top" secondItem="8u5-9s-35L" secondAttribute="bottom" constant="5" id="Awz-6s-Lkv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zx6-tl-Y6y" secondAttribute="bottom" id="C9J-V1-AbV"/>
+                            <constraint firstItem="8u5-9s-35L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EcT-f8-pIf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2oT-4o-JRL" secondAttribute="bottom" constant="20" id="OHg-bY-sL0"/>
                             <constraint firstItem="Zx6-tl-Y6y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ybe-xF-LhN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8u5-9s-35L" secondAttribute="trailing" constant="20" id="cj3-6g-UvB"/>
                             <constraint firstItem="2oT-4o-JRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gVl-gb-2kP"/>
                             <constraint firstItem="2oT-4o-JRL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sRT-4j-g99"/>
-                            <constraint firstItem="Zx6-tl-Y6y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sRV-Pk-q28"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2oT-4o-JRL" secondAttribute="trailing" constant="20" id="x9K-IV-Ly2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -106,6 +123,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Zx6-tl-Y6y" id="wVw-bU-fHp"/>
                         <outlet property="detailView" destination="2oT-4o-JRL" id="Dec-Eo-mzu"/>
+                        <outlet property="segmentView" destination="8u5-9s-35L" id="dMA-dn-7QE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
